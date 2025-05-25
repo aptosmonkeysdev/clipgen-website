@@ -8,7 +8,14 @@ import { useEffect } from "react";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const pages = ["Home", "Features", "Solutions", "About", "Pricing"];
+  const pages = [
+    "Home",
+    "Features",
+    "Solutions",
+    "Affiliate",
+    "About",
+    "Pricing",
+  ];
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -18,53 +25,70 @@ export default function Navbar() {
     if (target === "Home") {
       navigate("/");
       setActive("Home");
+      setMenuOpen(false);
     } else if (target === "Features") {
-      if (location.pathname !== "/") navigate("/");
-      setTimeout(() => {
+      if (location.pathname !== "/") {
+        navigate("/");
+        setTimeout(() => {
+          document
+            .getElementById("features-section")
+            ?.scrollIntoView({ behavior: "smooth" });
+        }, 50);
+      } else {
         document
           .getElementById("features-section")
           ?.scrollIntoView({ behavior: "smooth" });
-      }, 50);
+      }
       setActive("Features");
+      setMenuOpen(false);
     } else if (target === "Solutions") {
-      if (location.pathname !== "/") navigate("/");
-      setTimeout(() => {
+      if (location.pathname !== "/") {
+        navigate("/");
+        setTimeout(() => {
+          document
+            .getElementById("solutions-section")
+            ?.scrollIntoView({ behavior: "smooth" });
+        }, 50);
+      } else {
         document
           .getElementById("solutions-section")
           ?.scrollIntoView({ behavior: "smooth" });
-      }, 50);
+      }
       setActive("Solutions");
+      setMenuOpen(false);
     } else {
       navigate(`/${target.toLowerCase().replace(" ", "-")}`);
       setActive(target);
-    }
-  };
-useEffect(() => {
-  if (location.pathname !== "/") return;
-
-  const handleScroll = () => {
-    const scrollY = window.scrollY;
-
-    const features = document.getElementById("features-section");
-    const solutions = document.getElementById("solutions-section");
-
-    const featuresTop = features?.offsetTop || 0;
-    const solutionsTop = solutions?.offsetTop || 0;
-
-    const buffer = 100; // tweak if needed for header height
-
-    if (scrollY + buffer >= solutionsTop) {
-      setActive("Solutions");
-    } else if (scrollY + buffer >= featuresTop) {
-      setActive("Features");
-    } else {
-      setActive("Home");
+      setMenuOpen(false);
     }
   };
 
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
-}, [location.pathname]);
+  useEffect(() => {
+    if (location.pathname !== "/") return;
+
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+
+      const features = document.getElementById("features-section");
+      const solutions = document.getElementById("solutions-section");
+
+      const featuresTop = features?.offsetTop || 0;
+      const solutionsTop = solutions?.offsetTop || 0;
+
+      const buffer = 100; // tweak if needed for header height
+
+      if (scrollY + buffer >= solutionsTop) {
+        setActive("Solutions");
+      } else if (scrollY + buffer >= featuresTop) {
+        setActive("Features");
+      } else {
+        setActive("Home");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [location.pathname]);
 
   return (
     <>
@@ -83,13 +107,13 @@ useEffect(() => {
         </div>
 
         {/* Center nav (Desktop Only) */}
-        <div className="hidden md:inline-flex mx-4 backdrop-blur-md bg-white/10 border border-white/10 rounded-xl shadow-md px-12 py-2 gap-6 font-medium justify-center text-gray-300">
+        <div className="hidden md:inline-flex mx-4 backdrop-blur-md bg-white/10 border border-white/10 rounded-xl shadow-md px-12 py-2 gap-6  justify-center text-gray-300">
           {pages.map((page) => (
             <button
               key={page}
               onClick={() => handleNavClick(page)}
               className={`hover:text-white transition-colors duration-200 ${
-                active === page ? "text-white font-semibold" : "text-grey"
+                active === page ? "text-white" : "text-grey"
               }`}
             >
               {page}
@@ -168,9 +192,15 @@ useEffect(() => {
             </div>
             <div className="space-y-6 text-lg font-medium">
               {pages.map((page) => (
-                <a key={page} href="#" className="block hover:underline">
+                <button
+                  key={page}
+                  className={`block hover:underline ${
+                    active === page ? "text-white" : "text-grey"
+                  }`}
+                  onClick={() => handleNavClick(page)}
+                >
                   {page}
-                </a>
+                </button>
               ))}
             </div>
           </div>
