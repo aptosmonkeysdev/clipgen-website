@@ -5,6 +5,7 @@ import discord from "../../assets/icons/discord.svg";
 import instagram from "../../assets/icons/instagram.svg";
 import tiktok from "../../assets/icons/tiktok.svg";
 import linkedin from "../../assets/icons/linkedin.svg";
+import changeTheWay from "../../assets/changeTheWay.svg";
 export default function Footer() {
   return (
     <footer className="text-white">
@@ -14,9 +15,8 @@ export default function Footer() {
           backgroundImage: "url('/Banner.svg')",
         }}
       >
-        <p className="text-sm text-orange-400 font-medium mb-2">
-          Change the way you podcast
-        </p>
+        <img src={changeTheWay} className=" mb-5" />
+
         <Title
           whiteGradient={"Create, edit, and share podcast clips"}
           greyGradient={"instantly for FREE"}

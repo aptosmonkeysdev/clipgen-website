@@ -91,7 +91,10 @@ export default function HomePage() {
         </div>
 
         {/* Features Explanation Section */}
-        <div id="features-section" className="flex flex-col items-center justify-center pt-12">
+        <div
+          id="features-section"
+          className="flex flex-col items-center justify-center pt-12"
+        >
           <div className="w-full max-w-[80vw] flex flex-col md:flex-row items-start gap-8">
             {/* Left Column */}
             <div className="md:w-1/4 space-y-2 text-left">
@@ -127,7 +130,7 @@ export default function HomePage() {
         </div>
 
         {/*features array*/}
-        <div id="solutions-section" className="pt-16">
+        <div className="pt-16">
           <div className="w-full max-w-[85vw] mx-auto">
             <div className="overflow-x-auto ">
               <div className="flex gap-6 w-max">
@@ -167,7 +170,10 @@ export default function HomePage() {
 
         {/* description array */}
 
-        <div className="relative w-full overflow-hidden pt-12">
+        <div
+          id="solutions-section"
+          className="relative w-full overflow-hidden pt-12"
+        >
           {/* Background image with lower opacity, full width */}
           <div
             className="absolute  w-full h-full bg-cover bg-center bg-no-repeat  z-0"
