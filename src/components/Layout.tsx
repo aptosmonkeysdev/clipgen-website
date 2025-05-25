@@ -1,6 +1,7 @@
 // Layout.tsx
 import React from "react";
 import Navbar from "./navigation/NavBar";
+import Footer from "./navigation/Footer";
 
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
@@ -9,6 +10,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <Navbar />
       <main className="">{children}</main>
       {/* <main className="px-4 py-6">{children}</main> */}
+      <Footer/>
     </div>
   );
 };

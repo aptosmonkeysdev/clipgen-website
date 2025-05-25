@@ -66,7 +66,7 @@ export default function HomePage() {
     <div className="text-white py-10">
       <div className="max-w-6xl mx-auto">
         {/* Hero Section */}
-        <div className="text-center space-y-6">
+        <div className="text-center space-y-2">
           <Title
             orangeTitle={"Podcast Clips, Supercharged."}
             whiteGradient={"Convert your podcast"}
@@ -91,7 +91,7 @@ export default function HomePage() {
         </div>
 
         {/* Features Explanation Section */}
-        <div className="flex flex-col items-center justify-center pt-12">
+        <div id="features-section" className="flex flex-col items-center justify-center pt-12">
           <div className="w-full max-w-[80vw] flex flex-col md:flex-row items-start gap-8">
             {/* Left Column */}
             <div className="md:w-1/4 space-y-2 text-left">
@@ -127,7 +127,7 @@ export default function HomePage() {
         </div>
 
         {/*features array*/}
-        <div className="pt-16">
+        <div id="solutions-section" className="pt-16">
           <div className="w-full max-w-[85vw] mx-auto">
             <div className="overflow-x-auto ">
               <div className="flex gap-6 w-max">
@@ -194,14 +194,15 @@ export default function HomePage() {
                   </div>
 
                   {/* Image block */}
-          <div className={`w-full md:w-1/2 flex justify-center md:justify-start`}>
-  <img
-    src={item.img}
-    alt={`Feature ${index}`}
-    className="md:w-3/4 rounded-md"
-  />
-</div>
-
+                  <div
+                    className={`w-full md:w-1/2 flex justify-center md:justify-start`}
+                  >
+                    <img
+                      src={item.img}
+                      alt={`Feature ${index}`}
+                      className="md:w-3/4 rounded-md"
+                    />
+                  </div>
                 </div>
               );
             })}
