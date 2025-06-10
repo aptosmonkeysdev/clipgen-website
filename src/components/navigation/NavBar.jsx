@@ -12,7 +12,6 @@ export default function Navbar() {
     "Home",
     "Features",
     "Solutions",
-    "Affiliate",
     "About",
     "Pricing",
   ];
@@ -139,17 +138,7 @@ export default function Navbar() {
 
           {/* Desktop: Login + Get Started */}
           <div className="hidden md:flex gap-3">
-            <Button
-              variant="contained"
-              style={{
-                backgroundColor: "black",
-                color: "white",
-                textTransform: "none",
-                border: "1px solid white",
-              }}
-            >
-              Login
-            </Button>
+     
             <Button
               variant="contained"
               style={{
@@ -206,7 +195,7 @@ export default function Navbar() {
           </div>
 
           {/* Bottom: Login Button */}
-          <div className="p-6">
+          {/* <div className="p-6">
             <Button
               fullWidth
               variant="contained"
@@ -216,9 +205,9 @@ export default function Navbar() {
                 textTransform: "none",
               }}
             >
-              Login
+              Get start
             </Button>
-          </div>
+          </div> */}
         </div>
       </Drawer>
     </>
