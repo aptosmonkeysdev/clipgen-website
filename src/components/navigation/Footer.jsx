@@ -6,7 +6,9 @@ import instagram from "../../assets/icons/instagram.svg";
 import tiktok from "../../assets/icons/tiktok.svg";
 import linkedin from "../../assets/icons/linkedin.svg";
 import changeTheWay from "../../assets/changeTheWay.svg";
+import {useNavigate} from "react-router-dom";
 export default function Footer() {
+    const navigate = useNavigate()
   return (
     <footer className="text-white">
       <div
@@ -26,6 +28,7 @@ export default function Footer() {
 
         <Button
           variant="contained"
+          onClick={()=>window.location.replace(import.meta.env.VITE_APP_LOGIN_URL)}
           style={{
             backgroundColor: "orange",
             color: "black",

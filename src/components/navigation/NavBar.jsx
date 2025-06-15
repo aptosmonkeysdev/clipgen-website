@@ -126,6 +126,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <Button
               variant="contained"
+              onClick={()=>window.location.replace(import.meta.env.VITE_APP_LOGIN_URL)}
               style={{
                 backgroundColor: "orange",
                 color: "white",
@@ -141,6 +142,7 @@ export default function Navbar() {
      
             <Button
               variant="contained"
+              onClick={()=>window.location.replace(import.meta.env.VITE_APP_LOGIN_URL)}
               style={{
                 backgroundColor: "orange",
                 color: "white",

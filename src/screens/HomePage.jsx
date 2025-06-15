@@ -13,6 +13,7 @@ import light from "../assets/Light.png";
 import Title from "../components/Title";
 import GreyGradientText from "../components/GreyGradientText";
 import { Button } from "@mui/material";
+import {useNavigate} from "react-router-dom";
 
 export default function HomePage() {
   const features = [
@@ -61,7 +62,7 @@ export default function HomePage() {
       img: face,
     },
   ];
-
+  const navigate = useNavigate()
   return (
     <div className="text-white py-10">
       <div className="max-w-6xl mx-auto">
@@ -102,6 +103,7 @@ export default function HomePage() {
               <GreyGradientText greyGradient={"Our Features"} />
               <Button
                 variant="contained"
+                onClick={()=>window.location.replace(import.meta.env.VITE_APP_LOGIN_URL)}
                 style={{
                   backgroundColor: "orange",
                   color: "white",
