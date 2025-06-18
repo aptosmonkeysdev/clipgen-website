@@ -6,67 +6,58 @@ const plans = ['Free', 'Creator', 'Pro', 'Enterprise'];
 const features = [
     {
         name: 'Output Clip Resolution',
-        tooltip: 'The resolution of the exported clip.',
+        tooltip: 'Resolution of the short-form clips that you get back.',
         values: ['720P', '720P', '1080P', '1080P'],
     },
     {
         name: 'Input Video Resolution',
-        tooltip: 'The maximum resolution your uploaded video can be.',
+        tooltip: 'Maximum resolution of a single episode\'s video file that you can provide to us as an upload.',
         values: ['1080P', '1080P', '1440P', '2160P (4K)'],
     },
     {
         name: 'Maximum Single File Upload',
-        tooltip: 'Max file size you can upload at once.',
+        tooltip: 'Maximum filesize of a single episode\'s video file that you can provide to us as an upload.',
         values: ['2GB', '2GB', '6GB', '10GB'],
     },
     {
-        name: 'Watermark',
-        tooltip: 'Indicates whether output includes a watermark.',
+        name: 'Custom Text Overlay',
+        tooltip: 'Free tier clips have a subtle ClipGen watermark on them. Free tier is a great way to try the product and see what clips we generate.',
         values: ['✅', '❌', '❌', '❌'],
     },
     {
         name: 'Support 30+ languages',
-        tooltip: 'Supports over 30 different spoken languages.',
+        tooltip: 'List of supported languages: - English - Spanish - French - German - Italian - Portuguese - Russian - Dutch - Swedish - Norwegian - Danish - Finnish - Polish - Czech ...',
         values: ['✅', '✅', '✅', '✅'],
     },
     {
         name: 'Add/edit Subtitles',
-        tooltip: 'Add or edit subtitles directly in the editor.',
-        values: ['✅', '✅', '✅', '✅'],
-    },
-    {
-        name: 'A.I Title, Description and Hashtags',
-        tooltip: 'Generate titles, descriptions, and hashtags using AI.',
-        values: ['✅', '✅', '✅', '✅'],
-    },
-    {
-        name: 'A.I Keyword Highlighting',
-        tooltip: 'Automatically highlights important keywords.',
-        values: ['✅', '✅', '✅', '✅'],
-    },
-    {
-        name: 'A.I Animated Emojis',
-        tooltip: 'Add animated emojis to match the tone and content.',
+        tooltip: 'Add/remove words, and correct typos in subtitles.',
         values: ['✅', '✅', '✅', '✅'],
     },
     {
         name: 'Aspect Ratios (9:16, 4:5, 1:1, 16:9)',
-        tooltip: 'Choose from multiple video aspect ratios.',
+        tooltip: 'Choose export resolution of final clips: 9:16 (most popular), 4:5, 1:1, 16:9.',
         values: ['9:16', '✅', '✅', '✅'],
     },
     {
         name: 'Remove silences',
-        tooltip: 'Automatically remove silent parts from videos.',
+        tooltip: 'Remove silences (jumpcut) to make the clips snappier and better suited for short-form social platforms.',
         values: ['✅', '✅', '✅', '✅'],
     },
     {
+        name: 'Auto generated title, description and hashtags',
+        tooltip: 'We generate recommended title, description, and hashtags to use on social media when posting each clip.',
+        values: ['✅', '✅', '✅', '✅'],
+    },
+
+    {
         name: 'Audio spectrum (audio-only)',
-        tooltip: 'Visualize audio waveforms in audio-only clips.',
+        tooltip: 'Add an audio spectrum/audiogram for audio-only podcasts to increase engagement.',
         values: ['✅', '✅', '✅', '✅'],
     },
     {
         name: 'Choice of 5 subtitle fonts',
-        tooltip: 'Select from 5 built-in subtitle fonts.',
+        tooltip: 'Choose from 5 provided fonts to get subtitles matching your branding.',
         values: ['✅', '✅', '✅', '✅'],
     },
     {
@@ -81,28 +72,33 @@ const features = [
     },
     {
         name: 'Custom subtitle fonts',
-        tooltip: 'Upload your own fonts for subtitles.',
-        values: ['❌', '❌', 'COMING SOON', 'COMING SOON'],
-    },
-    {
-        name: 'Download clean highlight files',
-        tooltip: 'Download highlight files without extra markup.',
+        tooltip: 'Choose to have subtitles in custom font to ensure that the clips match your branding.',
         values: ['❌', '❌', 'COMING SOON', 'COMING SOON'],
     },
     {
         name: 'Multi language subtitles',
-        tooltip: 'Generate subtitles in multiple languages.',
+        tooltip: 'Translate the subtitles for your clips into any other supported language (e.g. add English subtitles to your Spanish-speaking podcast).',
         values: ['❌', '❌', 'COMING SOON', 'COMING SOON'],
     },
     {
         name: 'Accelerated Hardware',
-        tooltip: 'Utilize faster hardware for rendering.',
+        tooltip: 'Use the most powerful machines available to get your clips in the fastest possible time, in the most reliable manner.',
         values: ['❌', '❌', '❌', '✅'],
     },
     {
         name: 'Priority Support',
-        tooltip: 'Get faster and prioritized support from the team.',
+        tooltip: '1-on-1 support.',
         values: ['❌', '❌', '❌', '✅'],
+    },
+    {
+        name: 'A.I Keyword Highlighting',
+        tooltip: 'Automatically highlights important keywords.',
+        values: ['✅', '✅', '✅', '✅'],
+    },
+    {
+        name: 'A.I Animated Emojis',
+        tooltip: 'Add animated emojis to match the tone and content.',
+        values: ['✅', '✅', '✅', '✅'],
     },
 ];
 
