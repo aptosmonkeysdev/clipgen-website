@@ -8,7 +8,7 @@ export const Pricing = () => {
 
     return  (
         <div>
-            <div className="grid grid-cols-4 md:flex-row gap-4 justify-center items-stretch p-8 pb-0 text-white">
+            <div className="grid md:grid-cols-4 md:flex-row gap-4 justify-center items-stretch p-8 pb-0 text-white">
                 {/* Free Plan */}
                 <div className={`bg-[#111] rounded-xl p-6  justify-between shadow-md `}>
                     <div>
