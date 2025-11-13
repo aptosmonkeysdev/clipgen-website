@@ -45,7 +45,7 @@ export default function Footer() {
         <p className="text-sm text-grey">Privacy & Terms</p>
 
         <div className="flex gap-6 text-xl">
-          <a href="#">
+          {/* <a href="#">
             <img src={twitter} />
           </a>
           <a href="#">
@@ -53,13 +53,13 @@ export default function Footer() {
           </a>
           <a href="#">
             <img src={linkedin} />
-          </a>
+          </a> */}
           <a href="#">
             <img src={instagram} />
           </a>
-          <a href="#">
+          {/* <a href="#">
             <img src={tiktok} />
-          </a>
+          </a> */}
         </div>
 
         <p className="text-sm text-gray-500">

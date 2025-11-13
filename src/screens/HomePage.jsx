@@ -7,13 +7,13 @@ import render from "../assets/home/render.svg";
 import share from "../assets/home/share.svg";
 import creating from "../assets/home/creating.png";
 
-import transcript from "../assets/home/transcript.svg";
+import transcript from "../assets/home/transcript.png";
 import face from "../assets/home/face.svg";
 import light from "../assets/Light.png";
 import Title from "../components/Title";
 import GreyGradientText from "../components/GreyGradientText";
 import { Button } from "@mui/material";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function HomePage() {
   const features = [
@@ -83,6 +83,18 @@ export default function HomePage() {
 
           <div className="py-4">
             <img src={trust} className="mx-auto" />
+            <Button
+              variant="contained"
+              onClick={() => window.location.replace(import.meta.env.VITE_APP_LOGIN_URL)}
+              style={{
+                backgroundColor: "orange",
+                color: "white",
+                textTransform: "none",
+                marginTop: 20,
+              }}
+            >
+              Try For Free
+            </Button>
             <img src={fadedText} className="mx-auto mt-4" />
             <div className="w-full max-w-[85vw] mx-auto">
               <img src={dashboard} className="w-full mb-8" />
@@ -103,7 +115,7 @@ export default function HomePage() {
               <GreyGradientText greyGradient={"Our Features"} />
               <Button
                 variant="contained"
-                onClick={()=>window.location.replace(import.meta.env.VITE_APP_LOGIN_URL)}
+                onClick={() => window.location.replace(import.meta.env.VITE_APP_LOGIN_URL)}
                 style={{
                   backgroundColor: "orange",
                   color: "white",
@@ -189,9 +201,8 @@ export default function HomePage() {
               return (
                 <div
                   key={index}
-                  className={`flex flex-col md:flex-row items-center gap-8 ${
-                    !isEven ? "md:flex-row-reverse" : "md:flex-row"
-                  }`}
+                  className={`flex flex-col md:flex-row items-center gap-8 ${!isEven ? "md:flex-row-reverse" : "md:flex-row"
+                    }`}
                 >
                   {/* Text block */}
                   <div className="w-full md:w-1/2 text-white space-y-4">
