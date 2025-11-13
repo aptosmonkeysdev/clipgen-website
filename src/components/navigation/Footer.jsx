@@ -54,7 +54,7 @@ export default function Footer() {
           <a href="#">
             <img src={linkedin} />
           </a> */}
-          <a href="#">
+          <a href="https://www.instagram.com/clipgenapp/" target="_blank">
             <img src={instagram} />
           </a>
           {/* <a href="#">
