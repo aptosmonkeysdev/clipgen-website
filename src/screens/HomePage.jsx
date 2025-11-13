@@ -74,7 +74,7 @@ export default function HomePage() {
             greyGradient={"into engaging video clips."}
           />
 
-          <div className="text-sm text-grey leading-7 max-w-xl mx-auto">
+          <div className="text-sm text-grey leading-7 max-w-xl mx-auto mt-10">
             ClipGen automatically repurposes your podcast into short-form clips
             in one click,
             <br />
