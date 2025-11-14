@@ -20,8 +20,8 @@ export const Pricing = () => {
                         </div>
                     </div>
                     <ul className="mb-4 space-y-1 text-sm mt-5">
-                        <li className="flex gap-2"><img src="/check.svg" /> 5 Clips (720p)</li>
-                        <li className="flex gap-2"><img src="/check.svg" /> 60 Upload Minutes</li>
+                        <li className="flex gap-2"><img src="/check.svg" /> 1 Clip</li>
+                        <li className="flex gap-2"><img src="/check.svg" /> 30min Upload</li>
                     </ul>
                 </div>
 
@@ -29,12 +29,12 @@ export const Pricing = () => {
                 <div className={`bg-[#111] rounded-xl p-6   justify-between shadow-md `}>
                     <div>
                         <h3 className="text-[#E99700] font-semibold text-lg mb-1">Creator</h3>
-                        <p className="text-3xl mt-5 font-bold mb-2">${(5 * creatorLevel).toFixed(2)} <span className="text-sm font-normal text-white">/ month</span></p>
+                        <p className="text-3xl mt-5 font-bold mb-2">${(9 * creatorLevel).toFixed(2)} <span className="text-sm font-normal text-white">/ month</span></p>
                     </div>
 
                     <ul className="mb-4 space-y-1 text-sm mt-5">
-                        <li className="flex gap-2"><img src="/check.svg" /> {10 * creatorLevel} Clips (720p)</li>
-                        <li className="flex gap-2"><img src="/check.svg" /> {60 * creatorLevel} Upload Minutes</li>
+                        <li className="flex gap-2"><img src="/check.svg" /> {15 * creatorLevel} Clips Download</li>
+                        <li className="flex gap-2"><img src="/check.svg" /> {60 * creatorLevel} mins</li>
                     </ul>
                     <div className="mt-4 text-sm text-gray-400 mt-5">
                         <p className="mb-1">Drag slider to customise plan:</p>
@@ -46,13 +46,13 @@ export const Pricing = () => {
                 <div className={`bg-[#111] rounded-xl p-6 justify-between shadow-md`}>
                     <div>
                         <h3 className="text-yellow-400 font-semibold text-lg mb-1 flex gap-2"><img src="/king.svg" />Pro</h3>
-                        <p className="text-3xl mt-5 font-bold mb-2">${(10 * proLevel).toFixed(2)} <span className="text-sm font-normal text-white">/ month</span></p>
+                        <p className="text-3xl mt-5 font-bold mb-2">${(19 * proLevel).toFixed(2)} <span className="text-sm font-normal text-white">/ month</span></p>
 
                     </div>
 
                     <ul className="mb-4 space-y-1 text-sm mt-5">
-                        <li className="flex gap-2"><img src="/check.svg" /> {15 * proLevel} Clips (1080p)</li>
-                        <li className="flex gap-2"><img src="/check.svg" /> {60 * proLevel} Upload Minutes</li>
+                        <li className="flex gap-2"><img src="/check.svg" /> {45 * proLevel} Clips</li>
+                        <li className="flex gap-2"><img src="/check.svg" /> {180 * proLevel} mins Upload</li>
                     </ul>
 
                     <div className="mt-5 text-sm text-gray-400 ">
